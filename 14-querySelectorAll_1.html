@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="text/javascript">
+
+    console.log('Just the first line')
+
+    window.addEventListener("load", (event) => {
+      console.log('Pagina HTML, DOM y recursos (imágenes, etc) cargados')
+    });
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+      console.log("Pagina HTML y DOM cargados");
+    });
+
+    window.onload = function () {
+      console.log('Pagina HTML, DOM y recursos (imágenes, etc) cargados')
+      var enlaces = document.querySelectorAll("#favoritos li a");
+      console.log('enlaces is an array?') // de que tipo es enlaces?
+      console.log(Array.isArray(enlaces))
+      console.log(typeof enlaces)
+      console.log(enlaces)
+
+      for (var i = 0; i < enlaces.length; i++) {
+        enlaces[i].innerHTML = enlaces[i].href;
+        // console.log(`Enlace ${enlaces[i].innerHTML}`)
+      }
+      
+
+      var inactivos = document.querySelectorAll("li.inactivo a");
+      for (var i = 0; i < inactivos.length; i++) {
+        inactivos[i].parentNode.innerHTML = inactivos[i].innerHTML;
+        console.log(`Enlace inactivo ${inactivos[i].innerHTML}`)
+      }
+    }
+
+    console.log('The line before </head...')
+  </script>
+</head>
+
+<body>
+  <ul id="favoritos">
+    <li><a href="http://www.unirioja.es">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.apple.com">Enlace</a></li>
+    <li><a href="http://www.jquery.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elpais.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elmundo.es">Enlace</a></li>
+  </ul>
+
+  <div class="note">
+    <ol>
+      <li>Cambiar el texto del enlace "Enlace" por la URL (href) </li>
+      <li>Los que tengan la clase "inactivo" dejarlos como texto (sin enlace a href)</li>
+    </ol>
+    ¿Dónde está el código JS?
+  </div>
+
+  <div>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll</a>
+  </div>
+</body>
+
+</html>

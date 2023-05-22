@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    window.onload = function () {
+      let a = document.getElementById("contenido");
+      console.log(a)
+      let d = document.getElementsByTagName('div')
+      console.log(d)
+      
+      let childLength = a.childNodes.length;
+      console.log(`items = ${childLength}`)
+      for (let i = 0; i < childLength; i++) {
+        let child = a.childNodes[i]
+        console.log('Child node type: ' + child.nodeType)
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <div id="contenido">
+    <p>Párrafo 1</p>
+
+
+
+    
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+  </div>
+
+
+  </script>
+</body>
+
+</html>

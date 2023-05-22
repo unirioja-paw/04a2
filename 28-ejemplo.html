@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    window.onload = function () {
+      // Array de elementos "<p>"
+      var ps = document.getElementsByTagName("p");
+      console.log(ps)
+
+      // El primer <p>
+      var primer_p = ps.item(0);
+      // O también
+      primer_p = ps[0];
+      
+      // Contenido de pp (el texto "El uno")
+      console.log(primer_p.nodeValue);  // MAL hecho (sale null)
+      console.log(primer_p.firstChild.nodeValue); // Bien
+
+      var tercer_p = document.getElementById("tres");
+      console.log(tercer_p.firstChild.nodeValue);
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <p>El uno</p>
+  <p>El dos</p>
+  <p id="tres">El tres</p>
+
+
+  </script>
+</body>
+
+</html>

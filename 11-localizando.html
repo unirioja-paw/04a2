@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <title>PAW</title>
+
+</head>
+
+<body>
+
+  <article>
+
+
+    <ul id="favoritos">
+      <li><a href="http://www.unirioja.es">Unirioja</a></li>
+      <li><a href="http://www.apple.com">Apple</a></li>
+      <li><a href="http://www.jquery.com">jQuery</a></li>
+      <li>Periodicos
+        <ul>
+          <li><a href="http://www.elpais.com">El País</a></li>
+          <li><a href="http://www.elmundo.es">El Mundo</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </article>
+
+  <script type="text/javascript">
+
+    var fav = document.getElementById("favoritos")
+    console.log(fav)
+
+    var uls = document.getElementsByTagName("ul")
+    console.log(uls)
+
+    var lis = fav.getElementsByTagName("li")
+    console.log(lis)
+
+    var ul2 = lis[3].getElementsByTagName("ul")[0]
+    console.log(ul2)
+
+  </script>
+
+</body>
+
+</html>

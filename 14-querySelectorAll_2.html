@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="text/javascript">
+
+    window.onload = function () {
+      var enlaces = document.querySelectorAll("#favoritos li a")
+      for (var i = 0; i < enlaces.length; i++) {
+        enlaces[i].innerHTML = enlaces[i].href;
+      }
+
+      // enlaces es un array?
+
+      // cambiar bucle for por .map()
+
+
+      console.log(enlaces)
+      // podría usar un .forEach()?
+
+      var inactivos = document.querySelectorAll("li.inactivo a");
+      for (var i = 0; i < inactivos.length; i++) {
+        inactivos[i].parentNode.innerHTML = inactivos[i].innerHTML;
+        console.log(`Enlace inactivo ${inactivos[i].innerHTML}`)
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <ul id="favoritos">
+    <li><a href="http://www.unirioja.es">Enlace a unirioja</a></li>
+    <li class="inactivo"><a href="http://www.apple.com">Enlace</a></li>
+    <li><a href="http://www.jquery.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elpais.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elmundo.es">Enlace</a></li>
+  </ul>
+
+
+</body>
+
+</html>

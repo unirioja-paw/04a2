@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <ul id="favoritos">
+    <li><a href="http://www.unirioja.es">Un enlace a la web unirioja</a></li>
+    <li class="inactivo"><a href="http://www.apple.com">Enlace</a></li>
+    <li><a href="http://www.jquery.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elpais.com">Enlace</a></li>
+    <li class="inactivo"><a href="http://www.elmundo.es">Enlace</a></li>
+  </ul>
+
+  <div class="note">
+    <p>
+      Localizar desde la consola del navegador
+    </p>
+  </div>
+
+  <script type="text/javascript">
+    // Ejemplo querySelectorAll
+    var result = document.querySelectorAll("#favoritos li a");
+    console.log(result)
+
+    // Ejemplo querySelector
+    var result = document.querySelector("#favoritos li");
+    console.log(result)
+    console.log(`Enlace: ${result.innerHTML}`)
+
+    console.log('nodeName')
+    console.log(result.nodeName)
+
+    console.log('parentNode')
+    console.log(result.parentNode)
+
+    console.log('innerHTML')
+    console.log(result.innerHTML)
+
+    console.log('innerText')
+    console.log(result.innerText) // es lo mismo innerHTML e innerText?
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>
